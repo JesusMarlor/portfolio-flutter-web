@@ -29,6 +29,7 @@ class Skills extends StatelessWidget {
             child: SlideInRight(
               child: Column(
                 children: [
+                  const SizedBox( height: 20,),
                   const Text("Habilidades", style: AppTheme.titleSection,),
                   const Text("Fullstack developer | Backend, Frontend, movil multiplataforma", style: TextStyle( fontSize: 25),),
                   SizedBox(

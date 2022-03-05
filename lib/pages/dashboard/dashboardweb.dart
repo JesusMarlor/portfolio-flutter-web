@@ -1,12 +1,14 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:opscroll_web/opscroll_web.dart';
+import 'package:portfolio/pages/dashboard/projects.dart';
 import 'package:portfolio/pages/dashboard/skills.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
 import 'package:portfolio/widgets/header_web.dart';
 import 'package:provider/provider.dart';
 
 import 'about_me.dart';
+import 'education.dart';
 
 class Dashboardweb extends StatelessWidget {
   const Dashboardweb({Key key}) : super(key: key);
@@ -36,9 +38,11 @@ class Dashboardweb extends StatelessWidget {
                               pageController: PageController(),//provider.pageController,
                               scrollingAnimationOptions: ScrollingAnimationOptions.Fading,
                               scrollSpeed: const Duration(milliseconds: 300),
-                              onePageChildren:[
+                              onePageChildren: const[
                                 AboutMe(),
-                                Skills()
+                                Skills(),
+                                Education(),
+                                Projects()
                               ]
                           ),
                         ),

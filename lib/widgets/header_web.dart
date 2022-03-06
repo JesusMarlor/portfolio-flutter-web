@@ -29,7 +29,7 @@ class HeaderWeb extends StatelessWidget {
               child: Container(
                   padding: const EdgeInsets.symmetric( vertical: 5 ),
                   child: Image.asset(
-                    'assets/logo.png',
+                    'assets/logo_start.png',
                     height: Responsive.isMobile(context) ? 30 : 80,
                     width: Responsive.isMobile(context) ? 80 : 190,
                   )

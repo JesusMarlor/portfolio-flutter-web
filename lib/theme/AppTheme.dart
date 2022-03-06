@@ -17,6 +17,7 @@ class AppTheme {
 
   static const TextStyle title =  TextStyle( fontSize: 45, fontWeight: FontWeight.bold);
   static const TextStyle subtitle = TextStyle( fontSize: 35 );
+  static const TextStyle body = TextStyle( fontSize: 20 );
 
 
   static const TextStyle titleSection =  TextStyle( fontSize: 35, fontWeight: FontWeight.bold);

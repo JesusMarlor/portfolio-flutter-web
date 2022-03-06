@@ -1,11 +1,12 @@
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/models/experience.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/models/school.dart';
 
 class DashboardProvider extends ChangeNotifier{
 
-  PageController pageController;
+  PageController pageController = PageController();
 
   String textSkills = "⚜ Sistemas web implementando Angular, ReactJs, Flutter Web"
       "\n⚜ Backend con Nodejs, Laravel, Express"
@@ -72,6 +73,37 @@ class DashboardProvider extends ChangeNotifier{
         imageAsset: "assets/images/ecocleancar.jpeg",
         url: "https://play.google.com/store/apps/details?id=xyz.kripton.ecocleancar&hl=es_419",
         color : const Color(0xffAFD766)
+    ),
+  ];
+
+  List<Experience> listExperience = [
+    Experience(
+      company: "Filup",
+      title: "Desarrollador de aplicaciones Moviles",
+      description: "Agosto de 2021 - Hasta ahora",
+      imageAsset: "assets/images/filup_logo.jpg",
+      color: Colors.green
+    ),
+    Experience(
+        company: "Creatibot",
+        title: "FullStack Developer",
+        description: "Enero 2017 - Junio 2021",
+        imageAsset: "assets/images/cb.png",
+        color: Colors.grey
+    ),
+    Experience(
+        company: "Kripton",
+        title: "FullStack Developer",
+        description: "Desde el 2016 - Hasta ahora",
+        imageAsset: "assets/logo_bg.png",
+      color: Colors.blueAccent
+    ),
+    Experience(
+        company: "Uady",
+        title: "Practicas profesionales",
+        description: "Enero de 2016 - Julio de 2016",
+        imageAsset: "assets/images/uady.png",
+      color: Colors.amber
     ),
   ];
 }

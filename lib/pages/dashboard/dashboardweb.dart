@@ -1,9 +1,12 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:opscroll_web/opscroll_web.dart';
+import 'package:portfolio/models/experience.dart';
+import 'package:portfolio/pages/dashboard/experience_contact.dart';
 import 'package:portfolio/pages/dashboard/projects.dart';
 import 'package:portfolio/pages/dashboard/skills.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
+import 'package:portfolio/widgets/footer_web.dart';
 import 'package:portfolio/widgets/header_web.dart';
 import 'package:provider/provider.dart';
 
@@ -18,6 +21,7 @@ class Dashboardweb extends StatelessWidget {
     return Scaffold(
         body: Consumer<DashboardProvider>(
           builder: ( context, provider, _ ){
+            //provider.initPages();
             return Container(
               child: Column(
                 children: [
@@ -35,14 +39,15 @@ class Dashboardweb extends StatelessWidget {
                           child: OpscrollWeb(
                               isFloatingButtonActive: true,
                               isTouchScrollingActive: true,
-                              pageController: PageController(),//provider.pageController,
+                              pageController: provider.pageController,
                               scrollingAnimationOptions: ScrollingAnimationOptions.Fading,
                               scrollSpeed: const Duration(milliseconds: 300),
                               onePageChildren: const[
                                 AboutMe(),
                                 Skills(),
                                 Education(),
-                                Projects()
+                                Projects(),
+                                ExperienceContact()
                               ]
                           ),
                         ),
@@ -52,7 +57,8 @@ class Dashboardweb extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  FooterWeb(),
                 ],
               )
             );

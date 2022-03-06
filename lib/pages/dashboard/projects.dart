@@ -18,6 +18,7 @@ class Projects extends StatelessWidget {
         children: [
           const SizedBox( height: 20,),
           const Text("Proyectos 📁", style: AppTheme.titleSection,),
+          const SizedBox( height: 20,),
           Expanded(
             child: AlignedGridView.count(
               crossAxisCount: 4,

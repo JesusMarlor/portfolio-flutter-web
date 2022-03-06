@@ -58,7 +58,7 @@ class ItemSchool extends StatelessWidget {
                       ],
                     ),
                     const SizedBox( width: 20,),
-                    Text( school.year, style: TextStyle( fontSize: 40, color: Colors.blueGrey ),)
+                    Text( school.year, style: const TextStyle( fontSize: 40, color: Colors.blueGrey ),)
                   ],
                 )
             : const SizedBox(),
@@ -84,7 +84,7 @@ class ItemSchool extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text( school.year, style: TextStyle( fontSize: 40, color: Colors.blueGrey ),),
+                Text( school.year, style: const TextStyle( fontSize: 40, color: Colors.blueGrey ),),
                 const SizedBox( width: 20,),
                 Column(
                   children: [

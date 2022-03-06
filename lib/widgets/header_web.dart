@@ -1,13 +1,17 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/provider/dashboard_provider.dart';
 import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/utils/utils.dart';
+import 'package:portfolio/widgets/card_menu.dart';
+import 'package:provider/provider.dart';
 
 class HeaderWeb extends StatelessWidget {
   const HeaderWeb({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final dashboardProvider = Provider.of<DashboardProvider>(context, listen: false);
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
@@ -38,46 +42,28 @@ class HeaderWeb extends StatelessWidget {
             Wrap(
               children: [
                 InkWell(
-                  onTap: ()=> Utils().openUrl("https://github.com/JesusMarlor"),
-                  child: Container(
-                    margin: const EdgeInsets.all(5),
-                    width: 45,
-                    height: 45,
-                    alignment: Alignment.center,
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle
-                    ),
-                    child: Image.asset("assets/icons/github.png", height: 40, width: 40,),
-                  )
+                  onTap: ()=> dashboardProvider.changePage(0),
+                  child: const CardMenu( title: "Inicio" )
                 ),
                 InkWell(
-                    onTap: ()=> Utils().openUrl("https://www.linkedin.com/in/jesus-marfil/"),
-                    child: Container(
-                      margin: const EdgeInsets.all(5),
-                      width: 45,
-                      height: 45,
-                      alignment: Alignment.center,
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle
-                      ),
-                      child: Image.asset("assets/icons/linkedin.png", height: 40, width: 40,),
-                    )
+                  onTap: ()=> dashboardProvider.changePage(1),
+                  child: const CardMenu( title: "Habilidades",)
                 ),
                 InkWell(
-                    onTap: ()=> Utils().openUrl("https://twitter.com/JesusMarlor"),
-                    child: Container(
-                      margin: const EdgeInsets.all(5),
-                      width: 45,
-                      height: 45,
-                      alignment: Alignment.center,
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle
-                      ),
-                      child: Image.asset("assets/icons/twitter.png", height: 40, width: 40,),
-                    )
+                    onTap: ()=> dashboardProvider.changePage(2),
+                    child: const CardMenu( title: "Educacion",)
+                ),
+                InkWell(
+                    onTap: ()=> dashboardProvider.changePage(3),
+                    child: const CardMenu( title: "Proyectos",)
+                ),
+                InkWell(
+                    onTap: ()=> dashboardProvider.changePage(4),
+                    child: const CardMenu( title: "Experiencia",)
+                ),
+                InkWell(
+                    onTap: ()=> dashboardProvider.changePage(5),
+                    child: const CardMenu( title: "Contactame",)
                 ),
               ],
             )

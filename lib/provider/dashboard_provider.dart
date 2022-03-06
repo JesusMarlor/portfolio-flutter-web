@@ -8,6 +8,15 @@ class DashboardProvider extends ChangeNotifier{
 
   PageController pageController = PageController();
 
+  void changePage( int index ){
+    //pageController.jumpToPage(index);
+    pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.linear,
+    );
+  }
+
   String textSkills = "⚜ Sistemas web implementando Angular, ReactJs, Flutter Web"
       "\n⚜ Backend con Nodejs, Laravel, Express"
       "\n⚜ Desarrollo movil nativo java/kotlin y multiplataforma con Flutter"

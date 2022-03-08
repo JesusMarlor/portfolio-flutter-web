@@ -8,11 +8,15 @@ class DashboardProvider extends ChangeNotifier{
 
   PageController pageController = PageController();
 
+  void setPageController(){
+    pageController = PageController();
+  }
+
   void changePage( int index ){
     //pageController.jumpToPage(index);
     pageController.animateToPage(
       index,
-      duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 500),
       curve: Curves.linear,
     );
   }
@@ -101,7 +105,7 @@ class DashboardProvider extends ChangeNotifier{
         color: Colors.grey
     ),
     Experience(
-        company: "Kripton",
+        company: "Freelancer",
         title: "FullStack Developer",
         description: "Desde el 2016 - Hasta ahora",
         imageAsset: "assets/logo_bg.png",

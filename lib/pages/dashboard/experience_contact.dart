@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
 import 'package:portfolio/theme/AppTheme.dart';
+import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/utils/utils.dart';
 import 'package:portfolio/widgets/card_experience.dart';
 import 'package:portfolio/widgets/footer_web.dart';
@@ -14,6 +15,7 @@ class ExperienceContact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dashboardProvider = Provider.of<DashboardProvider>(context, listen: false);
+    bool isDesktop = Responsive.isDesktop(context);
     return Container(
         margin: const EdgeInsets.all(10),
         child: Column(
@@ -23,7 +25,7 @@ class ExperienceContact extends StatelessWidget {
             const SizedBox( height: 20,),
             Expanded(
               child: AlignedGridView.count(
-                crossAxisCount: 4,
+                crossAxisCount: isDesktop?4:2,
                 itemCount: dashboardProvider.listExperience.length,
                 itemBuilder: (BuildContext context, int index){
                   return  InkWell(
@@ -31,8 +33,8 @@ class ExperienceContact extends StatelessWidget {
                       child: CardExperience( experience: dashboardProvider.listExperience[index] )
                   );
                 },
-                mainAxisSpacing: 4.0,
-                crossAxisSpacing: 4.0,
+                mainAxisSpacing: 8.0,
+                crossAxisSpacing: 8.0,
               ),
             ),
             Container(

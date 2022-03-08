@@ -14,12 +14,16 @@ class AppTheme {
   static const Color success = Color(0xff5cb85c);//#5cb85c
   static const Color info = Color(0xff5bc0de);//#5bc0de
 
-
+  ///for desktop
   static const TextStyle title =  TextStyle( fontSize: 45, fontWeight: FontWeight.bold);
   static const TextStyle subtitle = TextStyle( fontSize: 35 );
   static const TextStyle body = TextStyle( fontSize: 20 );
+  static const TextStyle titleSection =  TextStyle( fontSize: 20, fontWeight: FontWeight.bold);
+  ///for mobile
+  static const TextStyle titleMobile =  TextStyle( fontSize: 25, fontWeight: FontWeight.bold);
+  static const TextStyle subtitleMobile = TextStyle( fontSize: 18 );
+  static const TextStyle bodyMobile = TextStyle( fontSize: 15 );
+  static const TextStyle titleSectionMobile =  TextStyle( fontSize: 15, fontWeight: FontWeight.bold);
 
-
-  static const TextStyle titleSection =  TextStyle( fontSize: 35, fontWeight: FontWeight.bold);
 
 }

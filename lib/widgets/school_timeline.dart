@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/school.dart';
+import 'package:portfolio/utils/responsive.dart';
 
 enum ItemDirection{
   LEFT,
@@ -21,7 +22,10 @@ class SchoolTimeline extends StatelessWidget {
         shrinkWrap: true,
         itemBuilder: (BuildContext context, index){
           return SlideInUp(
-            child: ItemSchool(
+            child: Responsive.isDesktop(context) ? ItemSchool(
+              school: listSchools[index],
+              itemDirection: index%2==0 ? ItemDirection.LEFT : ItemDirection.RIGTH,
+            ) : ItemSchoolMobile(
               school: listSchools[index],
               itemDirection: index%2==0 ? ItemDirection.LEFT : ItemDirection.RIGTH,
             ),
@@ -97,6 +101,86 @@ class ItemSchool extends StatelessWidget {
           ),
         ],
       )
+    );
+  }
+
+}
+
+class ItemSchoolMobile extends StatelessWidget {
+
+  final ItemDirection itemDirection;
+  final School school;
+  const ItemSchoolMobile({Key key, @required this.itemDirection, @required this.school}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    print("item paint: ${school.title}");
+    final width = MediaQuery.of(context).size.width;
+    return Container(
+        margin: const EdgeInsets.all(5),
+        child: Row(
+          children: [
+            Expanded(
+              flex: 4,
+              child: itemDirection == ItemDirection.LEFT ?
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      SizedBox(
+                        width : width *.25,
+                          child: Text( school.title ?? "-", style: const TextStyle( fontSize: 10, fontWeight: FontWeight.bold),)
+                      ),
+                      SizedBox(
+                        width : width *.25,
+                          child: Text( school.description ?? "-", style: const TextStyle( fontSize: 12 ),)),
+                    ],
+                  ),
+                  const SizedBox( width: 5,),
+                  Text( school.year, style: const TextStyle( fontSize: 16, color: Colors.blueGrey ),)
+                ],
+              )
+                  : const SizedBox(),
+            ),
+            Column(
+              children:  [
+                Container(
+                  color: Colors.blue,
+                  height: 30,
+                  width: 1,
+                ),
+                const Icon( Icons.circle, color: Colors.blue ),
+                Container(
+                  color: Colors.blue,
+                  height: 30,
+                  width: 1,
+                ),
+              ],
+            ),
+            Expanded(
+              flex: 4,
+              child: itemDirection == ItemDirection.RIGTH ?
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text( school.year, style: const TextStyle( fontSize: 16, color: Colors.blueGrey ),),
+                  const SizedBox( width: 10,),
+                  Column(
+                    children: [
+                      SizedBox(
+                          width : width *.25,
+                          child: Text( school.title ?? "-", style: const TextStyle( fontSize: 10, fontWeight: FontWeight.bold),)),
+                      SizedBox(
+                          width : width *.25,
+                          child: Text( school.description ?? "-", style: const TextStyle( fontSize: 12 ),)),
+                    ],
+                  ),
+                ],
+              ) : const SizedBox(),
+            ),
+          ],
+        )
     );
   }
 

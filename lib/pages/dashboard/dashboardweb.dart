@@ -6,6 +6,7 @@ import 'package:portfolio/pages/dashboard/experience_contact.dart';
 import 'package:portfolio/pages/dashboard/projects.dart';
 import 'package:portfolio/pages/dashboard/skills.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
+import 'package:portfolio/widgets/bg_painter.dart';
 import 'package:portfolio/widgets/footer_web.dart';
 import 'package:portfolio/widgets/header_web.dart';
 import 'package:provider/provider.dart';
@@ -20,49 +21,35 @@ class Dashboardweb extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Consumer<DashboardProvider>(
-          builder: ( context, provider, _ ){
-            //provider.initPages();
-            return Container(
-              child: Column(
-                children: [
-                  const HeaderWeb(),
-                  const SizedBox( height: 10 ),
-                  Expanded(
-                    child: Row(
-                      children: [
-                        const Expanded(
-                          flex: 1,
-                          child: SizedBox(),
+            builder: ( context, provider, _ ){
+              //provider.initPages();
+              return Container(
+                  child: Column(
+                    children: [
+                      const HeaderWeb(),
+                      const SizedBox( height: 10 ),
+                      Expanded(
+                        child: OpscrollWeb(
+
+                            isFloatingButtonActive: true,
+                            isTouchScrollingActive: true,
+                            pageController: provider.pageController,
+                            scrollingAnimationOptions: ScrollingAnimationOptions.Fading,
+                            scrollSpeed: const Duration(milliseconds: 300),
+                            onePageChildren: const[
+                              AboutMe(),
+                              Skills(),
+                              Education(),
+                              Projects(),
+                              ExperienceContact()
+                            ]
                         ),
-                        Expanded(
-                          flex: 8,
-                          child: OpscrollWeb(
-                              isFloatingButtonActive: true,
-                              isTouchScrollingActive: true,
-                              pageController: provider.pageController,
-                              scrollingAnimationOptions: ScrollingAnimationOptions.Fading,
-                              scrollSpeed: const Duration(milliseconds: 300),
-                              onePageChildren: const[
-                                AboutMe(),
-                                Skills(),
-                                Education(),
-                                Projects(),
-                                ExperienceContact()
-                              ]
-                          ),
-                        ),
-                        const Expanded(
-                          flex: 1,
-                          child: SizedBox(),
-                        ),
-                      ],
-                    ),
-                  ),
-                  FooterWeb(),
-                ],
-              )
-            );
-          }
+                      ),
+                      FooterWeb(),
+                    ],
+                  )
+              );
+            }
         )
     );
   }

@@ -63,32 +63,12 @@ class HeaderMobile extends StatelessWidget {
                     PopupMenuItem(
                       child: Row(
                         children: [
-                          Icon( Icons.code, color: Colors.black, size: Responsive.isMobile(context) ? 20 : 40,),
-                          const SizedBox( width: 5 ),
-                          Text("Habilidades", style: TextStyle( color: Colors.black),)
-                        ],
-                      ),
-                      value: 1,
-                    ),
-                    PopupMenuItem(
-                      child: Row(
-                        children: [
                           Icon( Icons.school_outlined, color: Colors.black, size: Responsive.isMobile(context) ? 20 : 40,),
                           const SizedBox( width: 5 ),
                           Text("Educacion", style: TextStyle( color: Colors.black),)
                         ],
                       ),
-                      value: 2,
-                    ),
-                    PopupMenuItem(
-                      child: Row(
-                        children: [
-                          Icon( Icons.folder_open, color: Colors.black, size: Responsive.isMobile(context) ? 20 : 40,),
-                          const SizedBox( width: 5 ),
-                          Text("Proyectos", style: TextStyle( color: Colors.black),)
-                        ],
-                      ),
-                      value: 3,
+                      value: 1,
                     ),
                     PopupMenuItem(
                       child: Row(
@@ -98,7 +78,7 @@ class HeaderMobile extends StatelessWidget {
                           Text("Experiencia", style: TextStyle( color: Colors.black),)
                         ],
                       ),
-                      value: 4,
+                      value: 2,
                     ),
                   ]
               ),

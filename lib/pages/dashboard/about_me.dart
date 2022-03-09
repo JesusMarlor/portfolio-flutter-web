@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:portfolio/theme/AppTheme.dart';
+import 'package:portfolio/widgets/bg_painter.dart';
 import 'package:portfolio/widgets/social_networks.dart';
 
 class AboutMe extends StatelessWidget {
@@ -9,8 +10,18 @@ class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
-      //color: Colors.black,
+      /*decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              AppTheme.primaryColor,
+              AppTheme.primaryColor.withOpacity(0.5),
+              Colors.white,
+            ],
+            begin: Alignment(-0.7,12),
+            end: Alignment(1,-2),
+          ),
+      ),*/
+      //color: Colors.transparent,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

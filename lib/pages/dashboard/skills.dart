@@ -17,15 +17,21 @@ class Skills extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const Expanded(
+            flex: 1,
+            child: SizedBox(),
+          ),
           Expanded(
-            flex: 5,
+            flex: 4,
             child: SlideInLeft(
               child:  Lottie.asset('assets/lottie/skills.json')
             ),
           ),
           Expanded(
-            flex: 5,
+            flex: 4,
             child: SlideInRight(
               child: Column(
                 children: [
@@ -47,6 +53,10 @@ class Skills extends StatelessWidget {
                 ],
               )
             ),
+          ),
+          const Expanded(
+            flex: 1,
+            child: SizedBox(),
           )
         ],
       ),

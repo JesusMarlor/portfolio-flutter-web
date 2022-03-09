@@ -29,8 +29,8 @@ class Projects extends StatelessWidget {
                     child: CardProject( project: dashboardProvider.listProjects[index] )
                 );
               },
-              mainAxisSpacing: 4.0,
-              crossAxisSpacing: 4.0,
+              mainAxisSpacing: 8.0,
+              crossAxisSpacing: 8.0,
             ),
           )
         ],

@@ -13,7 +13,7 @@ class HeaderMobile extends StatelessWidget {
     final dashboardProvider = Provider.of<DashboardProvider>(context, listen: false);
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
       decoration: BoxDecoration(
         color:  Colors.white,
         boxShadow: <BoxShadow>[
@@ -30,7 +30,7 @@ class HeaderMobile extends StatelessWidget {
             InkWell(
               onTap:()=> Navigator.pushReplacementNamed(context, "dashboard"),
               child: Container(
-                  padding: const EdgeInsets.symmetric( vertical: 5 ),
+                  //padding: const EdgeInsets.symmetric( vertical: 5 ),
                   child: Image.asset(
                     'assets/logo_end.png',
                     height: Responsive.isMobile(context) ? 50 : 80,

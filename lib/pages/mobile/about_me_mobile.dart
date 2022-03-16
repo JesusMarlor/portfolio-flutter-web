@@ -17,54 +17,56 @@ class AboutMeMobile extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       //color: Colors.black,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-              height: 120,
-              child: Stack(
-                children: [
-                  ClipRRect(
-                      borderRadius: BorderRadius.circular(40.0),
-                      child: Image.asset("assets/images/profile.png", fit: BoxFit.fill, )
-                  ),
-                  Positioned(
-                      bottom: 0,
-                      left: 20,
-                      child: Lottie.asset('assets/lottie/codeMobile.json')
-                  ),
-                ],
-              )
-          ),
-          const SizedBox( height: 10 ),
-          Row(
-            children: const [
-              Expanded(
-                  child: Text("Jesús Marfil | Software developer", style: AppTheme.titleMobile, textAlign: TextAlign.center, )
-              ),
-            ],
-          ),
-          const Text("Autodidacta, me apasionan las nuevas tecnologías, Android, desarrollo de apps, smartphones, wearables.",style: AppTheme.subtitleMobile, textAlign: TextAlign.center,),
-          const SizedBox( height: 20 ),
-          const SocialNetworks(),
-          const SizedBox( height: 20 ),
-          const Text("Habilidades", style: AppTheme.titleSectionMobile,),
-          const Text("Fullstack developer | Backend, Frontend, movil multiplataforma", style: TextStyle( fontSize: 14),),
-          Container(
-            margin: const EdgeInsets.only( bottom: 10, top: 10),
-            constraints: const BoxConstraints( maxHeight: 170 ),
-            child: AlignedGridView.count(
-              crossAxisCount: 4,
-              itemCount: listSkills.length,
-              itemBuilder: (BuildContext context, int index){
-                return  CardSkill( skilll: listSkills[index] );
-              },
-              mainAxisSpacing: 4.0,
-              crossAxisSpacing: 4.0,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+                height: 120,
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(40.0),
+                        child: Image.asset("assets/images/profile.png", fit: BoxFit.fill, )
+                    ),
+                    Positioned(
+                        bottom: 0,
+                        left: 20,
+                        child: Lottie.asset('assets/lottie/codeMobile.json')
+                    ),
+                  ],
+                )
             ),
-          ),
-          Text(dashboardProvider.textSkills, style: const TextStyle( fontSize: 14),)
-        ],
+            const SizedBox( height: 10 ),
+            Row(
+              children: const [
+                Expanded(
+                    child: Text("Jesús Marfil | Software developer", style: AppTheme.titleMobile, textAlign: TextAlign.center, )
+                ),
+              ],
+            ),
+            const Text("Autodidacta, me apasionan las nuevas tecnologías, Android, desarrollo de apps, smartphones, wearables.",style: AppTheme.subtitleMobile, textAlign: TextAlign.center,),
+            const SizedBox( height: 20 ),
+            const SocialNetworks(),
+            const SizedBox( height: 20 ),
+            const Text("Habilidades", style: AppTheme.titleSectionMobile,),
+            const Text("Fullstack developer | Backend, Frontend, movil multiplataforma", style: TextStyle( fontSize: 14),),
+            Container(
+              margin: const EdgeInsets.only( bottom: 0, top: 10),
+              constraints: const BoxConstraints( maxHeight: 130 ),
+              child: AlignedGridView.count(
+                crossAxisCount: 4,
+                itemCount: listSkills.length,
+                itemBuilder: (BuildContext context, int index){
+                  return  CardSkill( skilll: listSkills[index] );
+                },
+                mainAxisSpacing: 4.0,
+                crossAxisSpacing: 4.0,
+              ),
+            ),
+            Text(dashboardProvider.textSkills, style: const TextStyle( fontSize: 14),)
+          ],
+        ),
       ),
     );
   }

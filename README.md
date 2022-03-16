@@ -6,6 +6,57 @@ Portfolio
 
 This project is a starting point for a Flutter application.
 
+### Secciones desde desktop
+
+<table style="width:100%">
+    <tr>
+        <td>
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk1.png?raw=true" width="250" height="450" />
+        </td>
+        <td>
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk2.png?raw=true" width="250" height="450" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk3.png?raw=true" width="250" height="450" />
+        </td>
+        <td>
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk4.png?raw=true" width="250" height="450" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk5.png?raw=true" width="250" height="450" />
+        </td>
+    </tr>
+</table>
+
+### Secciones desde movil
+
+
+<table style="width:100%">
+    <tr>
+        <td>
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/mobile1.png?raw=true" width="250" height="450" />
+        </td>
+        <td>
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/mobile2.png?raw=true" width="250" height="450" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/mobile3.png?raw=true" width="250" height="450" />
+        </td>
+    </tr>
+</table>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Live DEMO: https://perfil.pegassus.com.mx
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 Actualmente Flutter web puede compilar a web de dos maneras.\
 
 Skia: Dibujando en un canvas, se obtiene un mejor desempanio pero aun tiene problemas en algunos
@@ -42,3 +93,6 @@ flutter --version
 - [Deploy on Firebase](https://medium.com/flutter/must-try-use-firebase-to-host-your-flutter-app-on-the-web-852ee533a469)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
+-------------
+L.C.C Jesus Marfil
+-------------

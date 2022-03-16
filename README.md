@@ -32,7 +32,7 @@ This project is a starting point for a Flutter application.
 ### Secciones desde movil
 
 
-<table style="width:100%">
+<table style="width:100%; margin-left: auto; margin-right: auto;">
     <tr>
         <td>
             <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/mobile1.png?raw=true" width="250" height="450" />

@@ -1,7 +1,5 @@
 # portfolio
 
-Portfolio
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
@@ -21,17 +19,12 @@ This project is a starting point for a Flutter application.
     </tr>
     <tr>
         <td>
-            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk3.png?raw=true" width="250" height="450" />
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk4.png?raw=true" width="640" height="480" />
         </td>
     </tr>
     <tr>
         <td>
-            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk4.png?raw=true" width="250" height="450" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk5.png?raw=true" width="250" height="450" />
+            <img src="https://github.com/JesusMarlor/portfolio-flutter-web/blob/master/desk5.png?raw=true" width="640" height="480" />
         </td>
     </tr>
 </table>

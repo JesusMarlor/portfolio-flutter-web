@@ -27,16 +27,13 @@ class HeaderMobile extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            InkWell(
-              onTap:()=> Navigator.pushReplacementNamed(context, "dashboard"),
-              child: Container(
-                  //padding: const EdgeInsets.symmetric( vertical: 5 ),
-                  child: Image.asset(
-                    'assets/logo_end.png',
-                    height: Responsive.isMobile(context) ? 50 : 80,
-                    width: Responsive.isMobile(context) ? 100 : 190,
-                  )
-              ),
+            Container(
+                //padding: const EdgeInsets.symmetric( vertical: 5 ),
+                child: Image.asset(
+                  'assets/logo_end.png',
+                  height: Responsive.isMobile(context) ? 50 : 80,
+                  width: Responsive.isMobile(context) ? 100 : 190,
+                )
             ),
             Theme(
               data: ThemeData(

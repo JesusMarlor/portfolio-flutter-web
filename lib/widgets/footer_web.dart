@@ -24,25 +24,22 @@ class FooterWeb extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            InkWell(
-              onTap:()=> Navigator.pushReplacementNamed(context, "dashboard"),
-              child: Container(
-                  padding: const EdgeInsets.symmetric( vertical: 5 ),
-                  child: Image.asset(
-                    'assets/logo_end.png',
-                    height: Responsive.isMobile(context) ? 30 : 80,
-                    width: Responsive.isMobile(context) ? 80 : 190,
-                  )
-              ),
-            ),
-            Column(
-              children: [
-                Text("Esta web esta hecha con flutter"),
-                InkWell(
-                  onTap: ()=>Utils().openUrl("https://portfolio.pegassus.com.mx"),
-                  child: Text("Quieres ver una version en Angular? da click aqui"),
+            Container(
+                padding: const EdgeInsets.symmetric( vertical: 5 ),
+                child: Image.asset(
+                  'assets/logo_end.png',
+                  height: Responsive.isMobile(context) ? 30 : 80,
+                  width: Responsive.isMobile(context) ? 80 : 190,
                 )
-              ],
+            ),
+            InkWell(
+              onTap: ()=>Utils().openUrl("https://portfolio.pegassus.com.mx"),
+              child: Column(
+                children: const [
+                  Text("Esta web esta hecha con flutter"),
+                  Text("Quieres ver una version en Angular? da click aqui")
+                ],
+              ),
             )
           ],
         ),

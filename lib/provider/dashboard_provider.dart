@@ -30,20 +30,28 @@ class DashboardProvider extends ChangeNotifier{
 
   List<School> listSchools = [
     School(
+        title: "Cursos en linea",
+        description: "Platzi",
+        year: "2019",
+      link: "https://platzi.com/p/JesusMarfil/"
+    ),
+    School(
         title: "Licenciatura En Ciencias De La Computación",
         description: "Universidad Autonoma De Yucatán Tizimín, Yucatán",
-        year: "2015"
+        year: "2015",
+      link: "https://www.matematicas.uady.mx/planes-de-estudio/licenciaturas/licenciatura-en-ciencias-de-la-computacion"
     ),
     School(
         title: "Técnico Bachiller En Informatica",
         description: "Colegio Nacional De Bachilleres Tizimín, Yucatán.",
-        year: "2011"
+        year: "2011",
+      link: "https://www.conalep.edu.mx/"
     ),
-    School(
+    /*School(
         title: "Secundaria",
         description: "Técnica 33 Sucilá, Yucatán",
         year: "2008"
-    ),
+    ),*/
   ];
 
   List<Project> listProjects = [

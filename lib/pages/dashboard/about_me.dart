@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:portfolio/theme/AppTheme.dart';
@@ -52,12 +53,14 @@ class AboutMe extends StatelessWidget {
                   )
                 ),
                 const SizedBox( height: 20 ),
-                Row(
-                  children: const [
-                    Expanded(
-                        child: Text("Jesús Marfil | Software developer", style: AppTheme.title, textAlign: TextAlign.center, )
-                    ),
-                  ],
+                FadeInDown(
+                  child: Row(
+                    children: const [
+                      Expanded(
+                          child: Text("Jesús Marfil | Software developer", style: AppTheme.title, textAlign: TextAlign.center, )
+                      ),
+                    ],
+                  ),
                 ),
                 const Text("Autodidacta, me apasionan las nuevas tecnologías, Android, desarrollo de apps, smartphones, wearables.",style: AppTheme.subtitle),
                 const SizedBox( height: 10 ),

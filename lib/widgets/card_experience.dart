@@ -14,7 +14,7 @@ class CardExperience extends StatelessWidget {
       margin: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         color:   Theme.of(context).highlightColor, //Theme.of(context).primaryColor,//
-        borderRadius: BorderRadius.all(Radius.circular(isDesktop?10:5)),
+        borderRadius: BorderRadius.all(Radius.circular(20)),
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
@@ -50,19 +50,34 @@ class CardExperience extends StatelessWidget {
                   )
                 ],
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(experience.company, style: TextStyle( fontSize: isDesktop?25:16, fontWeight: FontWeight.bold, color: Colors.white ),),
-                  SizedBox( height: isDesktop?20:10 ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: Image.asset(experience.imageAsset, height: isDesktop?120:80,),
-                  ),
-                  SizedBox( height: isDesktop?20:10 ),
-                  Text(experience.title, style: TextStyle( fontSize: isDesktop?22:13 ),),
-                  Text(experience.description, style: TextStyle( fontSize: isDesktop?18:10 ),),
-                ],
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(child: Text(experience.company, style: TextStyle( fontSize: isDesktop?25:16, fontWeight: FontWeight.bold, color: Colors.white ), textAlign: TextAlign.center)),
+                    SizedBox( height: isDesktop?20:10 ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color:   Theme.of(context).highlightColor, //Theme.of(context).primaryColor,//
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              offset: const Offset(1.1, 1.1),
+                              blurRadius: 2.0),
+                        ],
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Image.asset(experience.imageAsset, height: isDesktop?120:65,),
+                      ),
+                    ),
+                    SizedBox( height: isDesktop?20: 10 ),
+                    Text(experience.title, style: TextStyle( fontSize: isDesktop?22:13 ),),
+                    Expanded(child: Text(experience.description, style: TextStyle( fontSize: isDesktop?18:10 ), textAlign: TextAlign.center,)),
+                  ],
+                ),
               )
             ],
           )

@@ -14,7 +14,7 @@ class CardProject extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color:   Theme.of(context).highlightColor, //Theme.of(context).primaryColor,//
-        borderRadius: BorderRadius.all(Radius.circular(isDesktop?10:5)),
+        borderRadius: BorderRadius.all(Radius.circular(20)),
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
@@ -53,15 +53,15 @@ class CardProject extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(project.company, style: TextStyle( fontSize: isDesktop?25:16, fontWeight: FontWeight.bold, color: Colors.white ),),
+                  Expanded(child: Text(project.company, style: TextStyle( fontSize: isDesktop?25:16, fontWeight: FontWeight.bold, color: Colors.white ), textAlign: TextAlign.center)),
                   SizedBox( height: isDesktop ? 20 : 10 ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
-                    child: Image.asset(project.imageAsset, height: isDesktop ? 120  : 50 ,),
+                    child: Image.asset(project.imageAsset, height: isDesktop ? 120  : 65 ,),
                   ),
                   SizedBox( height: isDesktop ? 20 : 10 ),
                   Text(project.title, style: TextStyle( fontSize: isDesktop? 22 : 13 ),),
-                  Text(project.description, style: TextStyle( fontSize: isDesktop? 18 : 10 ),),
+                  Expanded(child: Text(project.description, style: TextStyle( fontSize: isDesktop? 18 : 10 ), textAlign: TextAlign.center,)),
                 ],
               )
             ],

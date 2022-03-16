@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:opscroll_web/opscroll_web.dart';
-import 'package:portfolio/pages/dashboard/experience_contact.dart';
 import 'package:portfolio/pages/mobile/about_me_mobile.dart';
 import 'package:portfolio/pages/mobile/experience_contacto_mobile.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
@@ -13,6 +12,7 @@ import 'education_mobile.dart';
 
 class Dashboardmobile extends StatelessWidget {
   const Dashboardmobile({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -49,4 +49,5 @@ class Dashboardmobile extends StatelessWidget {
         )
     );
   }
+
 }

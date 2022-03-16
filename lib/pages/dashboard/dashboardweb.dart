@@ -17,6 +17,7 @@ import 'education.dart';
 class Dashboardweb extends StatelessWidget {
   const Dashboardweb({Key key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +31,6 @@ class Dashboardweb extends StatelessWidget {
                       const SizedBox( height: 10 ),
                       Expanded(
                         child: OpscrollWeb(
-
                             isFloatingButtonActive: true,
                             isTouchScrollingActive: true,
                             pageController: provider.pageController,

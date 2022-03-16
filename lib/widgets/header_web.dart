@@ -28,16 +28,13 @@ class HeaderWeb extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            InkWell(
-              onTap:()=> Navigator.pushReplacementNamed(context, "dashboard"),
-              child: Container(
-                  padding: const EdgeInsets.symmetric( vertical: 5 ),
-                  child: Image.asset(
-                    'assets/logo_start.png',
-                    height: Responsive.isMobile(context) ? 30 : 80,
-                    width: Responsive.isMobile(context) ? 80 : 190,
-                  )
-              ),
+            Container(
+                padding: const EdgeInsets.symmetric( vertical: 5 ),
+                child: Image.asset(
+                  'assets/logo_start.png',
+                  height: Responsive.isMobile(context) ? 30 : 80,
+                  width: Responsive.isMobile(context) ? 80 : 190,
+                )
             ),
             Wrap(
               children: [

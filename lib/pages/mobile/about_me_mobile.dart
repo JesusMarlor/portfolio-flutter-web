@@ -30,8 +30,8 @@ class AboutMeMobile extends StatelessWidget {
                   ),
                   Positioned(
                       bottom: 0,
-                      left: 60,
-                      child: Lottie.asset('assets/lottie/code.json')
+                      left: 20,
+                      child: Lottie.asset('assets/lottie/codeMobile.json')
                   ),
                 ],
               )

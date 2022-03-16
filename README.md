@@ -28,3 +28,17 @@ para compilar con el renderizado html y modo release
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 flutter build web --web-renderer html --release
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+--------------------------------------------------------------------------------
+Asegurate de tener la version 2.8.0 de flutter
+para hacer un downgrade, dentro de la carpeta donde se localiza el sdk ingresa el siguiente comando
+
+user@user:~/snap/flutter/common/flutter$ git checkout 2.8.0
+
+posteriormente...
+
+flutter --version
+
+- [Deploy on Firebase](https://medium.com/flutter/must-try-use-firebase-to-host-your-flutter-app-on-the-web-852ee533a469)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+

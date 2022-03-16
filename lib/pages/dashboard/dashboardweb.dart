@@ -45,7 +45,7 @@ class Dashboardweb extends StatelessWidget {
                             ]
                         ),
                       ),
-                      FooterWeb(),
+                      const FooterWeb(),
                     ],
                   )
               );

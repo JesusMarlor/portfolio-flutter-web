@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 class Utils{
 
   void openUrl(String url) {
+    if(url==null){return;}
     /*html.AnchorElement anchorElement =  html.AnchorElement(href: url);
     anchorElement.download = url;
     anchorElement.click();*/

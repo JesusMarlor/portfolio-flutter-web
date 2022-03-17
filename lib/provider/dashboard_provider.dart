@@ -103,28 +103,31 @@ class DashboardProvider extends ChangeNotifier{
       title: "Desarrollador de aplicaciones Moviles",
       description: "Agosto de 2021 - Hasta ahora",
       imageAsset: "assets/images/filup_logo.jpg",
-      color: Colors.green
+      color: Colors.green,
+      url: "https://filup.mx/"
     ),
     Experience(
         company: "Creatibot",
         title: "FullStack Developer",
         description: "Enero 2017 - Junio 2021",
         imageAsset: "assets/images/cb.png",
-        color: Colors.grey
+        color: Colors.grey,
+      url: "https://creatibot.com/"
     ),
     Experience(
         company: "Freelancer",
         title: "FullStack Developer",
         description: "Desde el 2016 - Hasta ahora",
         imageAsset: "assets/logo_bg.png",
-      color: Colors.blueAccent
+      color: Colors.blueAccent,
     ),
     Experience(
         company: "Uady",
         title: "Practicas profesionales",
         description: "Enero de 2016 - Julio de 2016",
         imageAsset: "assets/images/uady.png",
-      color: Colors.amber
+      color: Colors.amber,
+      url: "https://www.tizimin.uady.mx/"
     ),
   ];
 }

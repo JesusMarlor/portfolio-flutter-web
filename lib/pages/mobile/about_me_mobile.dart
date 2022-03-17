@@ -39,7 +39,7 @@ class AboutMeMobile extends StatelessWidget {
                 )
             ),
             const SizedBox( height: 10 ),
-            FadeInDown(
+            Bounce(
               child: Row(
                 children: const [
                   Expanded(

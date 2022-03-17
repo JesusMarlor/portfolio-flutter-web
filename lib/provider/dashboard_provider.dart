@@ -30,22 +30,22 @@ class DashboardProvider extends ChangeNotifier{
 
   List<School> listSchools = [
     School(
-        title: "Cursos en linea",
-        description: "Platzi",
-        year: "2019",
-      link: "https://platzi.com/p/JesusMarfil/"
+        title: "Técnico Bachiller En Informatica",
+        description: "Colegio Nacional De Bachilleres Tizimín, Yucatán.",
+        year: "2011",
+      link: "https://www.conalep.edu.mx/"
     ),
     School(
         title: "Licenciatura En Ciencias De La Computación",
         description: "Universidad Autonoma De Yucatán Tizimín, Yucatán",
         year: "2015",
-      link: "https://www.matematicas.uady.mx/planes-de-estudio/licenciaturas/licenciatura-en-ciencias-de-la-computacion"
+        link: "https://www.matematicas.uady.mx/planes-de-estudio/licenciaturas/licenciatura-en-ciencias-de-la-computacion"
     ),
     School(
-        title: "Técnico Bachiller En Informatica",
-        description: "Colegio Nacional De Bachilleres Tizimín, Yucatán.",
-        year: "2011",
-      link: "https://www.conalep.edu.mx/"
+        title: "Cursos en linea",
+        description: "Platzi",
+        year: "2019",
+        link: "https://platzi.com/p/JesusMarfil/"
     ),
     /*School(
         title: "Secundaria",
@@ -76,7 +76,7 @@ class DashboardProvider extends ChangeNotifier{
       title: "TinBin Encargos",
       description: "Desarrollo móvil multiplataforma.",
       imageAsset: "assets/images/tinbin.png",
-      url: "https://play.google.com/store/apps/details?id=com.creatibot.tinbinencargos&hl=es_419",
+      url: "https://apps.apple.com/mx/app/tinbin-encargos/id1536179569?l=en",//"https://play.google.com/store/apps/details?id=com.creatibot.tinbinencargos&hl=es_419",
         color : const Color(0xff268290)
     ),
     Project(

@@ -43,8 +43,6 @@ class ExperienceContact extends StatelessWidget {
                 children:  [
                   const Text("Contactame 💻", style: AppTheme.title,),
                   const SizedBox( height: 10 ),
-                  const Text("¿TIENES EN MENTE UN PROYECTO?", style: AppTheme.body),
-                  const SizedBox( height: 10 ),
                   InkWell(
                     onTap: ()=> Utils().launchPhone("9861070303"),
                     child: const Text("9861070303", style: AppTheme.body),

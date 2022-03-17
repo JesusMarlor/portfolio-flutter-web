@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/pages/dashboard/dashboardweb.dart';
+import 'package:portfolio/pages/desktop/dashboard_desktop.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key key}) : super(key: key);
@@ -8,7 +8,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Dashboardweb(),
+        child: DashboardDesktop(),
       ),
     );
   }

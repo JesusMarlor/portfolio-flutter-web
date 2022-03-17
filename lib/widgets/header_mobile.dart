@@ -30,7 +30,7 @@ class HeaderMobile extends StatelessWidget {
             Container(
                 //padding: const EdgeInsets.symmetric( vertical: 5 ),
                 child: Image.asset(
-                  'assets/logo_end.png',
+                  'assets/logo_start.png',
                   height: Responsive.isMobile(context) ? 50 : 80,
                   width: Responsive.isMobile(context) ? 100 : 190,
                 )

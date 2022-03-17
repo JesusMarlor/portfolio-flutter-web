@@ -1,31 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:portfolio/provider/dashboard_provider.dart';
-import 'package:portfolio/theme/AppTheme.dart';
-import 'package:portfolio/utils/responsive.dart';
-import 'package:portfolio/utils/utils.dart';
-import 'package:portfolio/widgets/card_experience.dart';
-import 'package:portfolio/widgets/footer_web.dart';
-import 'package:portfolio/widgets/social_networks.dart';
 import 'package:provider/provider.dart';
 
-class ExperienceContactMobile extends StatelessWidget {
-  const ExperienceContactMobile({Key key}) : super(key: key);
+import '../../provider/dashboard_provider.dart';
+import '../../theme/AppTheme.dart';
+import '../../utils/utils.dart';
+import '../../widgets/card_experience.dart';
+import '../../widgets/social_networks.dart';
+
+class ExperienceContactTablet extends StatelessWidget {
+  const ExperienceContactTablet({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final dashboardProvider = Provider.of<DashboardProvider>(context, listen: false);
-    bool isDesktop = Responsive.isDesktop(context);
+
     return Container(
         margin: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const SizedBox( height: 5,),
-            const Text("Experiencia", style: AppTheme.titleSection,),
-            const SizedBox( height: 10,),
+            const SizedBox( height: 20,),
+            const Text("Experiencia", style: AppTheme.titleSectionTablet,),
+            const SizedBox( height: 20,),
             Expanded(
               child: AlignedGridView.count(
-                crossAxisCount: isDesktop?4:2,
+                crossAxisCount: 3,
                 itemCount: dashboardProvider.listExperience.length,
                 itemBuilder: (BuildContext context, int index){
                   return  InkWell(
@@ -41,18 +40,18 @@ class ExperienceContactMobile extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   children:  [
-                    const Text("Contactame 💻", style: AppTheme.titleMobile,),
-                    const SizedBox( height: 5 ),
+                    const Text("Contactame 💻", style: AppTheme.titleTablet,),
+                    const SizedBox( height: 10 ),
                     InkWell(
                       onTap: ()=> Utils().launchPhone("9861070303"),
-                      child: const Text("9861070303", style: AppTheme.bodyMobile),
+                      child: const Text("9861070303", style: AppTheme.bodyTablet),
                     ),
-                    const SizedBox( height: 5 ),
+                    const SizedBox( height: 10 ),
                     InkWell(
                       onTap:()=> Utils().launchEmail("marfil.su@gmail.com"),
-                      child: const Text("marfil.su@gmail.com", style: AppTheme.body),
+                      child: const Text("marfil.su@gmail.com", style: AppTheme.bodyTablet),
                     ),
-                    const SizedBox( height: 5 ),
+                    const SizedBox( height: 10 ),
                     const SocialNetworks(),
                     const Text("© 2022, Jesús Marfil"),
                   ],

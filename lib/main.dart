@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/pages/mobile/dashboardmobile.dart';
-import 'package:portfolio/pages/dashboard/dashboardweb.dart';
+import 'package:portfolio/pages/mobile/dashboard_mobile.dart';
+import 'package:portfolio/pages/desktop/dashboard_desktop.dart';
+import 'package:portfolio/pages/tablet/dashboard_tablet.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
+import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/utils/responsive_layout.dart';
 import 'package:portfolio/utils/routes.dart';
 import 'package:provider/provider.dart';
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<DashboardProvider>(create: (_) => DashboardProvider()),
@@ -29,8 +32,9 @@ class MyApp extends StatelessWidget {
           fontFamily: "Roboto"
         ),
         home: const ResponsiveLayout(
-            mobileScreenLayout: Dashboardmobile(),
-            webScreenLayout: Dashboardweb()
+            mobileScreenLayout: DashboardMobile(),
+            tabletScreenLayout: DashboardTablet(),
+            webScreenLayout: DashboardDesktop()
         ),
           routes: getApplicationRoutes()
       ),

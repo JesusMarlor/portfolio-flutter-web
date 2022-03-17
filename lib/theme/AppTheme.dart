@@ -19,6 +19,13 @@ class AppTheme {
   static const TextStyle subtitle = TextStyle( fontSize: 35 );
   static const TextStyle body = TextStyle( fontSize: 20 );
   static const TextStyle titleSection =  TextStyle( fontSize: 20, fontWeight: FontWeight.bold);
+
+  ///for tablet
+  static const TextStyle titleTablet =  TextStyle( fontSize: 35, fontWeight: FontWeight.bold);
+  static const TextStyle subtitleTablet = TextStyle( fontSize: 25 );
+  static const TextStyle bodyTablet = TextStyle( fontSize: 15 );
+  static const TextStyle titleSectionTablet =  TextStyle( fontSize: 15, fontWeight: FontWeight.bold);
+
   ///for mobile
   static const TextStyle titleMobile =  TextStyle( fontSize: 25, fontWeight: FontWeight.bold);
   static const TextStyle subtitleMobile = TextStyle( fontSize: 18 );

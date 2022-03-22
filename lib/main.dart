@@ -3,6 +3,7 @@ import 'package:portfolio/pages/mobile/dashboard_mobile.dart';
 import 'package:portfolio/pages/desktop/dashboard_desktop.dart';
 import 'package:portfolio/pages/tablet/dashboard_tablet.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
+import 'package:portfolio/theme/AppTheme.dart';
 import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/utils/responsive_layout.dart';
 import 'package:portfolio/utils/routes.dart';
@@ -26,6 +27,12 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Portolio JM',
         debugShowCheckedModeBanner: false,
+          themeMode: ThemeMode.dark,
+          darkTheme: Theme.of(context).copyWith(
+            scaffoldBackgroundColor: AppTheme.kBackgroundColor,
+            primaryColor: AppTheme.kPrimaryColor,
+            canvasColor: AppTheme.kBackgroundColor,
+          ),
         theme: ThemeData(
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: Colors.white,

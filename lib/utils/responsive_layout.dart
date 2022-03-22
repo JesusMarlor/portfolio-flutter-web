@@ -14,9 +14,6 @@ class ResponsiveLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("isMobile? ${Responsive.isMobile(context)}");
-    print("IsTablet? ${Responsive.isTablet(context)}");
-    print("isDesktop? ${Responsive.isDesktop(context)}");
     return LayoutBuilder(
       builder: (context, constraints) {
         if(constraints.maxWidth > 1281) {

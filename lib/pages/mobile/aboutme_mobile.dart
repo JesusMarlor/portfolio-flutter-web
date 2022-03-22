@@ -19,6 +19,7 @@ class AboutMeMobile extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       //color: Colors.black,
       child: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -67,7 +68,7 @@ class AboutMeMobile extends StatelessWidget {
                 crossAxisSpacing: 4.0,
               ),
             ),
-            Text(dashboardProvider.textSkills, style: const TextStyle( fontSize: 14),)
+            Text(dashboardProvider.textSkills, style: const TextStyle( fontSize: 14, color: Colors.white),)
           ],
         ),
       ),

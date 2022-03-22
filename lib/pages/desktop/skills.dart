@@ -37,7 +37,7 @@ class Skills extends StatelessWidget {
                 children: [
                   const SizedBox( height: 20,),
                   const Text("Habilidades", style: AppTheme.titleSection,),
-                  const Text("Fullstack developer | Backend, Frontend, movil multiplataforma", style: TextStyle( fontSize: 25),),
+                  const Text("Fullstack developer | Backend, Frontend, movil multiplataforma", style: TextStyle( fontSize: 25, color: Colors.white),),
                   SizedBox(
                     height: 200,
                     child: ListView.builder(
@@ -49,7 +49,7 @@ class Skills extends StatelessWidget {
                       },
                     ),
                   ),
-                  Text(dashboardProvider.textSkills, style: TextStyle( fontSize: 22),)
+                  Text(dashboardProvider.textSkills, style: TextStyle( fontSize: 22, color: Colors.white),)
                 ],
               )
             ),

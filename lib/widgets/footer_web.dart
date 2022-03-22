@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/utils/utils.dart';
 
+import '../theme/AppTheme.dart';
+
 class FooterWeb extends StatelessWidget {
   const FooterWeb({Key key}) : super(key: key);
 
@@ -12,7 +14,7 @@ class FooterWeb extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       decoration: BoxDecoration(
-        color:  Colors.white,
+        color:  AppTheme.kBackgroundColor,
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
@@ -36,8 +38,8 @@ class FooterWeb extends StatelessWidget {
               onTap: ()=>Utils().openUrl("https://portfolio.pegassus.com.mx"),
               child: Column(
                 children: const [
-                  Text("Esta web esta hecha con flutter"),
-                  Text("Quieres ver una version en Angular? da click aqui")
+                  Text("Esta web esta hecha con flutter", style: TextStyle( color: Colors.white),),
+                  Text("Quieres ver una version en Angular? da click aqui", style: TextStyle( color: Colors.white))
                 ],
               ),
             )

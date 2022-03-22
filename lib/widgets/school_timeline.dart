@@ -19,6 +19,7 @@ class SchoolTimeline extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(10),
       child: ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: listSchools.length,
         shrinkWrap: true,
         itemBuilder: (BuildContext context, index){
@@ -65,8 +66,8 @@ class ItemSchool extends StatelessWidget {
                     children: [
                       Column(
                         children: [
-                          Text( school.title ?? "-", style: const TextStyle( fontSize: 22, fontWeight: FontWeight.bold),),
-                          Text( school.description ?? "-", style: const TextStyle( fontSize: 18 ),),
+                          Text( school.title ?? "-", style: const TextStyle( fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),),
+                          Text( school.description ?? "-", style: const TextStyle( fontSize: 18, color: Colors.white ),),
                         ],
                       ),
                       const SizedBox( width: 20,),
@@ -104,12 +105,12 @@ class ItemSchool extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text( school.year, style: const TextStyle( fontSize: 40, color: Colors.blueGrey ),),
+                  Text( school.year, style: const TextStyle( fontSize: 40, color: Colors.blueGrey),),
                   const SizedBox( width: 20,),
                   Column(
                     children: [
-                      Text( school.title ?? "-", style: const TextStyle( fontSize: 22, fontWeight: FontWeight.bold),),
-                      Text( school.description ?? "-", style: const TextStyle( fontSize: 18 ),),
+                      Text( school.title ?? "-", style: const TextStyle( fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),),
+                      Text( school.description ?? "-", style: const TextStyle( fontSize: 18, color: Colors.white ),),
                     ],
                   ),
                 ],
@@ -154,11 +155,11 @@ class ItemSchoolMobile extends StatelessWidget {
                       children: [
                         SizedBox(
                           width : width *.25,
-                            child: Text( school.title ?? "-", style: const TextStyle( fontSize: 10, fontWeight: FontWeight.bold),)
+                            child: Text( school.title ?? "-", style: const TextStyle( fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white),)
                         ),
                         SizedBox(
                           width : width *.25,
-                            child: Text( school.description ?? "-", style: const TextStyle( fontSize: 12 ),)),
+                            child: Text( school.description ?? "-", style: const TextStyle( fontSize: 12, color: Colors.white ),)),
                       ],
                     ),
                     const SizedBox( width: 5,),
@@ -202,10 +203,10 @@ class ItemSchoolMobile extends StatelessWidget {
                       children: [
                         SizedBox(
                             width : width *.25,
-                            child: Text( school.title ?? "-", style: const TextStyle( fontSize: 10, fontWeight: FontWeight.bold),)),
+                            child: Text( school.title ?? "-", style: const TextStyle( fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white),)),
                         SizedBox(
                             width : width *.25,
-                            child: Text( school.description ?? "-", style: const TextStyle( fontSize: 12 ),)),
+                            child: Text( school.description ?? "-", style: const TextStyle( fontSize: 12, color: Colors.white ),)),
                       ],
                     ),
                   ],

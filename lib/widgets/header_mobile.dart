@@ -15,7 +15,7 @@ class HeaderMobile extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
       decoration: BoxDecoration(
-        color:  Colors.white,
+        color:  AppTheme.kBackgroundColor,
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
@@ -31,16 +31,18 @@ class HeaderMobile extends StatelessWidget {
                 //padding: const EdgeInsets.symmetric( vertical: 5 ),
                 child: Image.asset(
                   'assets/logo_start.png',
-                  height: Responsive.isMobile(context) ? 50 : 80,
+                  height: Responsive.isMobile(context) ? 50 : 90,
                   width: Responsive.isMobile(context) ? 100 : 190,
                 )
             ),
             Theme(
               data: ThemeData(
-                  canvasColor: Colors.white,
-                  primaryColor: Colors.black,
-                  hintColor: Colors.black),
+                  backgroundColor: AppTheme.kBackgroundColor,
+                  canvasColor: AppTheme.kBackgroundColor,
+                  primaryColor: Colors.white,
+                  hintColor: Colors.white),
               child: PopupMenuButton(
+                color: AppTheme.kBackgroundColor,
                   tooltip: "Menu",
                   onSelected: (int value){
                     dashboardProvider.changePage(value);
@@ -50,9 +52,9 @@ class HeaderMobile extends StatelessWidget {
                     PopupMenuItem(
                       child: Row(
                         children: [
-                          Icon( Icons.home, color: Colors.black, size: Responsive.isMobile(context) ? 20 : 40,),
+                          Icon( Icons.home, color: Colors.white, size: Responsive.isMobile(context) ? 20 : 40,),
                           const SizedBox( width: 5 ),
-                          Text("Inicio", style: TextStyle( color: Colors.black),)
+                          Text("Inicio", style: TextStyle( color: Colors.white),)
                         ],
                       ),
                       value: 0,
@@ -60,9 +62,9 @@ class HeaderMobile extends StatelessWidget {
                     PopupMenuItem(
                       child: Row(
                         children: [
-                          Icon( Icons.school_outlined, color: Colors.black, size: Responsive.isMobile(context) ? 20 : 40,),
+                          Icon( Icons.school_outlined, color: Colors.white, size: Responsive.isMobile(context) ? 20 : 40,),
                           const SizedBox( width: 5 ),
-                          Text("Educacion", style: TextStyle( color: Colors.black),)
+                          Text("Educacion", style: TextStyle( color: Colors.white),)
                         ],
                       ),
                       value: 1,
@@ -70,9 +72,9 @@ class HeaderMobile extends StatelessWidget {
                     PopupMenuItem(
                       child: Row(
                         children: [
-                          Icon( Icons.work_outline, color: Colors.black, size: Responsive.isMobile(context) ? 20 : 40,),
+                          Icon( Icons.work_outline, color: Colors.white, size: Responsive.isMobile(context) ? 20 : 40,),
                           const SizedBox( width: 5 ),
-                          Text("Experiencia", style: TextStyle( color: Colors.black),)
+                          Text("Experiencia", style: TextStyle( color: Colors.white),)
                         ],
                       ),
                       value: 2,

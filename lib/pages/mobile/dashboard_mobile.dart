@@ -28,13 +28,10 @@ class DashboardMobile extends StatelessWidget {
                   const HeaderMobile(),
                   const SizedBox( height: 10 ),
                   Expanded(
-                    child: OpscrollWeb(
-                        isFloatingButtonActive: true,
-                        isTouchScrollingActive: true,
-                        pageController: provider.pageController,
-                        scrollingAnimationOptions: ScrollingAnimationOptions.Fading,
-                        scrollSpeed: const Duration(milliseconds: 300),
-                        onePageChildren: const[
+                    child: PageView(
+                      controller: provider.pageController,
+                        scrollDirection : Axis.vertical,
+                        children: const [
                           AboutMeMobile(),
                           EducationMobile(),
                           ExperienceContactMobile()

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/AppTheme.dart';
+
 class CardMenu extends StatelessWidget {
 
   final String title;
@@ -11,7 +13,10 @@ class CardMenu extends StatelessWidget {
       margin: const EdgeInsets.only(right: 10),
       child: Row(
         children: [
-          Text( title ?? "-"),
+          InkWell(
+            hoverColor: AppTheme.kPrimaryColor,
+              child: Text( title ?? "-", style: TextStyle( color: Colors.white ),)
+          ),
           const SizedBox( width: 5,),
           Container(
             color: Colors.blue,

@@ -13,6 +13,7 @@ class DashboardProvider extends ChangeNotifier{
   }
 
   void changePage( int index ){
+    print("===>changePage $index");
     //pageController.jumpToPage(index);
     pageController.animateToPage(
       index,

@@ -6,6 +6,8 @@ import 'package:portfolio/utils/utils.dart';
 import 'package:portfolio/widgets/card_menu.dart';
 import 'package:provider/provider.dart';
 
+import '../theme/AppTheme.dart';
+
 class HeaderWeb extends StatelessWidget {
   const HeaderWeb({Key key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class HeaderWeb extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
       decoration: BoxDecoration(
-        color:  Colors.white,
+        color:  AppTheme.kBackgroundColor,
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
@@ -57,10 +59,6 @@ class HeaderWeb extends StatelessWidget {
                 InkWell(
                     onTap: ()=> dashboardProvider.changePage(4),
                     child: const CardMenu( title: "Experiencia",)
-                ),
-                InkWell(
-                    onTap: ()=> dashboardProvider.changePage(5),
-                    child: const CardMenu( title: "Contactame",)
                 ),
               ],
             )

@@ -54,7 +54,7 @@ class AboutMeMobile extends StatelessWidget {
             const SocialNetworks(),
             const SizedBox( height: 20 ),
             const Text("Habilidades", style: AppTheme.titleSectionMobile,),
-            const Text("Fullstack developer | Backend, Frontend, movil multiplataforma", style: TextStyle( fontSize: 14),),
+            const Text("Fullstack developer | Backend, Frontend, movil multiplataforma", style: TextStyle( fontSize: 14, color: Colors.white ),),
             Container(
               margin: const EdgeInsets.only( bottom: 0, top: 10),
               constraints: const BoxConstraints( maxHeight: 130 ),

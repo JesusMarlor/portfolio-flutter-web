@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<DashboardProvider>(create: (_) => DashboardProvider()),
       ],
       child: MaterialApp(
-        title: 'Portolio JM',
+        title: 'Portfolio JM',
         debugShowCheckedModeBanner: false,
           themeMode: ThemeMode.dark,
           darkTheme: Theme.of(context).copyWith(

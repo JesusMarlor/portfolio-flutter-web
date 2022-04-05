@@ -63,8 +63,8 @@ class CardExperience extends StatelessWidget {
                       SizedBox( height: isDesktop?20:10 ),
                       Container(
                         decoration: BoxDecoration(
-                          color:   Theme.of(context).highlightColor, //Theme.of(context).primaryColor,//
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Theme.of(context).highlightColor, //Theme.of(context).primaryColor,//
+                          borderRadius: const BorderRadius.all(Radius.circular(20)),
                           boxShadow: <BoxShadow>[
                             BoxShadow(
                                 color: Colors.grey.withOpacity(0.2),

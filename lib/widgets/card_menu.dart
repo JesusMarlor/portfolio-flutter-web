@@ -13,10 +13,7 @@ class CardMenu extends StatelessWidget {
       margin: const EdgeInsets.only(right: 10),
       child: Row(
         children: [
-          InkWell(
-            hoverColor: AppTheme.kPrimaryColor,
-              child: Text( title ?? "-", style: TextStyle( color: Colors.white ),)
-          ),
+          Text( title ?? "-", style: const TextStyle( color: Colors.white ),),
           const SizedBox( width: 5,),
           Container(
             color: Colors.blue,

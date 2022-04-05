@@ -78,10 +78,10 @@ flutter build web --web-renderer html --release
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 --------------------------------------------------------------------------------
-Asegurate de tener la version 2.8.0 de flutter
+Asegurate de tener la version 2.10.3 de flutter
 para hacer un downgrade, dentro de la carpeta donde se localiza el sdk ingresa el siguiente comando
 
-user@user:~/snap/flutter/common/flutter$ git checkout 2.8.0
+user@user:~/snap/flutter/common/flutter$ git checkout 2.10.3
 
 posteriormente...
 

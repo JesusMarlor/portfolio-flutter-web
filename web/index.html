@@ -32,12 +32,32 @@
   <title>portfolio</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css"  href="css/ripple.css">
 </head>
 <body>
-  <img src="img/logo.png" class="center" width="200" height="100"/>
-  <div class="area">
+  <!-- <img src="img/logo_end.png" class="center" width="200" height="100" style="margin-top: 120px"/> -->
+  <!-- <div class="area">
     <div class="mover"></div>
+  </div> -->
+  <div id="loader">
+    <div class="lds-ripple">
+      <div></div>
+    </div>
   </div>
+  <script>
+    var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+    console.log("isSafari:" + isSafari);
+    if( isSafari ){
+      setTimeout(function(){
+        var x = document.getElementById("loader");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      },3000);
+    }
+  </script>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->

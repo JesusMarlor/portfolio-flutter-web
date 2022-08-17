@@ -75,6 +75,7 @@ para compilar con el renderizado html y modo release
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 flutter build web --web-renderer html --release
+flutter build web --web-renderer canvaskit
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 --------------------------------------------------------------------------------

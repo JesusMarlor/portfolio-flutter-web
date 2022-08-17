@@ -96,6 +96,14 @@ class DashboardProvider extends ChangeNotifier{
         url: "https://play.google.com/store/apps/details?id=xyz.kripton.ecocleancar&hl=es_419",
         color : const Color(0xffAFD766)
     ),
+    Project(
+        company: "Freelancer",
+        title: "DescubreTizimin",
+        description: "Desarrollo móvil multiplataforma.",
+        imageAsset: "assets/images/descubretizimin.png",
+        url: "https://play.google.com/store/apps/details?id=xyz.kripton.descubretizimin&hl=es_419",
+        color : const Color(0xff9a1508)
+    ),
   ];
 
   List<Experience> listExperience = [

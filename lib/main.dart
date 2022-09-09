@@ -4,12 +4,13 @@ import 'package:portfolio/pages/desktop/dashboard_desktop.dart';
 import 'package:portfolio/pages/tablet/dashboard_tablet.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
 import 'package:portfolio/theme/AppTheme.dart';
-import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/utils/responsive_layout.dart';
 import 'package:portfolio/utils/routes.dart';
 import 'package:provider/provider.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 
@@ -38,11 +39,12 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           fontFamily: "Roboto"
         ),
-        home: const ResponsiveLayout(
+        initialRoute: "/",
+        /*home: const ResponsiveLayout(
             mobileScreenLayout: DashboardMobile(),
             tabletScreenLayout: DashboardTablet(),
             webScreenLayout: DashboardDesktop()
-        ),
+        ),*/
           routes: getApplicationRoutes()
       ),
     );

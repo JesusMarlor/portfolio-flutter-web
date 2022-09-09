@@ -10,14 +10,15 @@ class DeleteData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(30),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: const [
               Text("Instrucciones de Eliminación de Datos", style: TextStyle( fontSize: 40, color: Colors.white), textAlign: TextAlign.center,),
-              Text(TextUtil.deleteData, style: TextStyle( color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)
+               SizedBox(height: 20,),
+              Text(TextUtil.deleteData, style: TextStyle( color: Colors.white, fontSize: 20,),)
             ],
           ),
         ),

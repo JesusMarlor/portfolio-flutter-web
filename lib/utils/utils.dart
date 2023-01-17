@@ -1,4 +1,4 @@
-import 'dart:html' as html;
+
 import 'dart:js' as js;
 
 import 'package:url_launcher/url_launcher.dart';

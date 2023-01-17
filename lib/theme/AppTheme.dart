@@ -24,6 +24,7 @@ class AppTheme {
   static const TextStyle title =  TextStyle( fontSize: 45, fontWeight: FontWeight.bold, color: kPrimaryColor);
   static const TextStyle subtitle = TextStyle( fontSize: 35, color: Colors.white );
   static const TextStyle body = TextStyle( fontSize: 20, color: Colors.white );
+  static const TextStyle body2 = TextStyle( fontSize: 16, color: Colors.white );
   static const TextStyle titleSection =  TextStyle( fontSize: 25, fontWeight: FontWeight.bold, color: kPrimaryColor);
 
   ///for tablet
@@ -36,6 +37,7 @@ class AppTheme {
   static const TextStyle titleMobile =  TextStyle( fontSize: 25, fontWeight: FontWeight.bold, color: kPrimaryColor);
   static const TextStyle subtitleMobile = TextStyle( fontSize: 18,  color: Colors.white );
   static const TextStyle bodyMobile = TextStyle( fontSize: 15,  color: Colors.white );
+  static const TextStyle bodyMobile2 = TextStyle( fontSize: 12,  color: Colors.white );
   static const TextStyle titleSectionMobile =  TextStyle( fontSize: 20, fontWeight: FontWeight.bold, color: kPrimaryColor);
 
 

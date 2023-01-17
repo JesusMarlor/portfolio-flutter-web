@@ -5,6 +5,7 @@ import 'package:lottie/lottie.dart';
 import 'package:portfolio/models/skill.dart';
 import 'package:portfolio/provider/dashboard_provider.dart';
 import 'package:portfolio/theme/AppTheme.dart';
+import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/widgets/card_skill.dart';
 import 'package:portfolio/widgets/social_networks.dart';
 import 'package:provider/provider.dart';
@@ -44,12 +45,14 @@ class AboutMeMobile extends StatelessWidget {
               child: Row(
                 children: const [
                   Expanded(
-                      child: Text("Jesús Marfil | Software developer", style: AppTheme.titleMobile, textAlign: TextAlign.center, )
+                      child: Text("Jesús Marfil", style: AppTheme.titleMobile, textAlign: TextAlign.center, )//| Software developer
                   ),
                 ],
               ),
             ),
-            const Text("Autodidacta, me apasionan las nuevas tecnologías, Android, desarrollo de apps, smartphones, wearables.",style: AppTheme.subtitleMobile, textAlign: TextAlign.center,),
+            const Text("Programador de profesión y por pasión. \nExperto en desarrollo móvil.",style: AppTheme.subtitleMobile, textAlign: TextAlign.center,),
+            const SizedBox( height: 5 ),
+            const Text(Constants.about,style: AppTheme.bodyMobile2, textAlign: TextAlign.center,),
             const SizedBox( height: 20 ),
             const SocialNetworks(),
             const SizedBox( height: 20 ),

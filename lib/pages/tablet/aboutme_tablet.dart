@@ -50,7 +50,7 @@ class AboutMeTablet extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Text("Autodidacta, me apasionan las nuevas tecnologías, Android, desarrollo de apps, smartphones, wearables.",style: AppTheme.subtitleTablet),
+                const Text("Programador de profesión y por pasión. Experto en desarrollo móvil.",style: AppTheme.subtitleTablet),
                 const SizedBox( height: 10 ),
                 const SocialNetworks()
               ],

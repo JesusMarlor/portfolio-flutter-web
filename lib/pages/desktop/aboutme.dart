@@ -5,6 +5,8 @@ import 'package:portfolio/theme/AppTheme.dart';
 import 'package:portfolio/widgets/bg_painter.dart';
 import 'package:portfolio/widgets/social_networks.dart';
 
+import '../../utils/constants.dart';
+
 class AboutMe extends StatelessWidget {
   const AboutMe({Key key}) : super(key: key);
 
@@ -57,12 +59,14 @@ class AboutMe extends StatelessWidget {
                   child: Row(
                     children: const [
                       Expanded(
-                          child: Text("Jesús Marfil | Software developer", style: AppTheme.title, textAlign: TextAlign.center, )
+                          child: Text("Jesús Marfil", style: AppTheme.title, textAlign: TextAlign.center, ) //| Software developer
                       ),
                     ],
                   ),
                 ),
-                const Text("Autodidacta, me apasionan las nuevas tecnologías, Android, desarrollo de apps, smartphones, wearables.",style: AppTheme.subtitle),
+                const Text("Programador de profesión y por pasión. \nExperto en desarrollo móvil.",style: AppTheme.subtitle, textAlign: TextAlign.center,),
+                const SizedBox( height: 10 ),
+                const Text(Constants.about,style: AppTheme.body2, textAlign: TextAlign.center,),
                 const SizedBox( height: 10 ),
                 const SocialNetworks()
               ],

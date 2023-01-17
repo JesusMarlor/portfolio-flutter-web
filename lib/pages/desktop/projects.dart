@@ -19,7 +19,20 @@ class Projects extends StatelessWidget {
           const SizedBox( height: 20,),
           const Text("Proyectos 📁", style: AppTheme.titleSection,),
           const SizedBox( height: 20,),
-          Expanded(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Wrap(
+              children: List.generate(dashboardProvider.listProjects.length, (index) => InkWell(
+                  onTap: ()=> Utils().openUrl(dashboardProvider.listProjects[index].url),
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    width: MediaQuery.of(context).size.height * .25,
+                      height: MediaQuery.of(context).size.height * .32,
+                      child: CardProject( project: dashboardProvider.listProjects[index] ))
+              )),
+            ),
+          ),
+          /*Expanded(
             child: AlignedGridView.count(
               crossAxisCount: 4,
               itemCount: dashboardProvider.listProjects.length,
@@ -32,7 +45,7 @@ class Projects extends StatelessWidget {
               mainAxisSpacing: 8.0,
               crossAxisSpacing: 8.0,
             ),
-          )
+          )*/
         ],
       )
     );

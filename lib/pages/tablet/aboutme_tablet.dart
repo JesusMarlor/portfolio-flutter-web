@@ -5,6 +5,8 @@ import 'package:portfolio/theme/AppTheme.dart';
 import 'package:portfolio/widgets/bg_painter.dart';
 import 'package:portfolio/widgets/social_networks.dart';
 
+import '../../utils/constants.dart';
+
 class AboutMeTablet extends StatelessWidget {
   const AboutMeTablet({Key key}) : super(key: key);
 
@@ -50,8 +52,10 @@ class AboutMeTablet extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Text("Programador de profesión y por pasión. Experto en desarrollo móvil.",style: AppTheme.subtitleTablet),
-                const SizedBox( height: 10 ),
+                const Text("Programador de profesión y por pasión. \nExperto en desarrollo móvil.",style: AppTheme.subtitle, textAlign: TextAlign.center,),
+                SizedBox(height: MediaQuery.of(context).size.height * .02,),
+                const Text(Constants.about,style: AppTheme.body2, textAlign: TextAlign.center,),
+                SizedBox(height: MediaQuery.of(context).size.height * .02,),
                 const SocialNetworks()
               ],
             ),

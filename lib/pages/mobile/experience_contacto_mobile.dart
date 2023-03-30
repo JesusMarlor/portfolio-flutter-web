@@ -37,16 +37,22 @@ class ExperienceContactMobile extends StatelessWidget {
                 crossAxisSpacing: 8.0,
               ),
             ),
+            Wrap(
+              crossAxisAlignment : WrapCrossAlignment.center,
+              spacing: 30,
+              children: [
+                Image.asset("assets/images/dev1.png", width:  MediaQuery.of(context).size.height * .08,),
+                SizedBox(height: MediaQuery.of(context).size.height * .2,),
+                Image.asset("assets/images/dev3.png",width:  MediaQuery.of(context).size.height * .08),
+                SizedBox(height: MediaQuery.of(context).size.height * .2,),
+                Image.asset("assets/images/dev2.png",width:  MediaQuery.of(context).size.height * .08,),
+              ],
+            ),
             Container(
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   children:  [
                     const Text("Contactame 💻", style: AppTheme.titleMobile,),
-                    const SizedBox( height: 5 ),
-                    InkWell(
-                      onTap: ()=> Utils().launchPhone("9861070303"),
-                      child: const Text("9861070303", style: AppTheme.bodyMobile),
-                    ),
                     const SizedBox( height: 5 ),
                     InkWell(
                       onTap:()=> Utils().launchEmail("marfil.su@gmail.com"),

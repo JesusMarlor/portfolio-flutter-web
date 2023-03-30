@@ -49,7 +49,7 @@ class Skills extends StatelessWidget {
                       },
                     ),
                   ),
-                  Text(dashboardProvider.textSkills, style: TextStyle( fontSize: 22, color: Colors.white),)
+                  Text(dashboardProvider.textSkills, style: const TextStyle( fontSize: 22, color: Colors.white),)
                 ],
               )
             ),

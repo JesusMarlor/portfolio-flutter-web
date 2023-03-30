@@ -14,7 +14,7 @@ packages:
       name: archive
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.2.1"
+    version: "3.3.6"
   async:
     dependency: transitive
     description:
@@ -64,20 +64,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
+  convert:
+    dependency: transitive
+    description:
+      name: convert
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.0"
   crypto:
     dependency: transitive
     description:
       name: crypto
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.1"
+    version: "3.0.2"
   cupertino_icons:
     dependency: "direct main"
     description:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.4"
+    version: "1.0.5"
   equatable:
     dependency: transitive
     description:
@@ -117,7 +124,7 @@ packages:
       name: flutter_staggered_grid_view
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.1"
+    version: "0.6.2"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -141,7 +148,7 @@ packages:
       name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "10.2.1"
+    version: "10.4.0"
   get_it:
     dependency: transitive
     description:
@@ -169,7 +176,7 @@ packages:
       name: lottie
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.2"
+    version: "1.4.2"
   matcher:
     dependency: transitive
     description:
@@ -239,14 +246,21 @@ packages:
       name: plugin_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.2"
+    version: "2.1.3"
+  pointycastle:
+    dependency: transitive
+    description:
+      name: pointycastle
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.7.2"
   provider:
     dependency: "direct main"
     description:
       name: provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.2"
+    version: "6.0.5"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -307,56 +321,56 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.20"
+    version: "6.1.8"
   url_launcher_android:
     dependency: transitive
     description:
       name: url_launcher_android
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.15"
+    version: "6.0.23"
   url_launcher_ios:
     dependency: transitive
     description:
       name: url_launcher_ios
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.15"
+    version: "6.0.18"
   url_launcher_linux:
     dependency: transitive
     description:
       name: url_launcher_linux
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.2"
   url_launcher_macos:
     dependency: transitive
     description:
       name: url_launcher_macos
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.2"
   url_launcher_platform_interface:
     dependency: transitive
     description:
       name: url_launcher_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.5"
+    version: "2.1.1"
   url_launcher_web:
     dependency: transitive
     description:
       name: url_launcher_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.6"
+    version: "2.0.14"
   url_launcher_windows:
     dependency: transitive
     description:
       name: url_launcher_windows
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "3.0.2"
   url_strategy:
     dependency: "direct main"
     description:
@@ -380,4 +394,4 @@ packages:
     version: "5.3.1"
 sdks:
   dart: ">=2.14.0 <3.0.0"
-  flutter: ">=2.8.0"
+  flutter: ">=2.10.0"

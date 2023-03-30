@@ -13,17 +13,6 @@ class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      /*decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              AppTheme.primaryColor,
-              AppTheme.primaryColor.withOpacity(0.5),
-              Colors.white,
-            ],
-            begin: Alignment(-0.7,12),
-            end: Alignment(1,-2),
-          ),
-      ),*/
       //color: Colors.transparent,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -37,7 +26,7 @@ class AboutMe extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const SizedBox( height: 20 ),
+                SizedBox(height: MediaQuery.of(context).size.height * .05,),
                 SizedBox(
                   height: 320,
                   child: Stack(
@@ -65,9 +54,9 @@ class AboutMe extends StatelessWidget {
                   ),
                 ),
                 const Text("Programador de profesión y por pasión. \nExperto en desarrollo móvil.",style: AppTheme.subtitle, textAlign: TextAlign.center,),
-                const SizedBox( height: 10 ),
+                SizedBox(height: MediaQuery.of(context).size.height * .02,),
                 const Text(Constants.about,style: AppTheme.body2, textAlign: TextAlign.center,),
-                const SizedBox( height: 10 ),
+                SizedBox(height: MediaQuery.of(context).size.height * .02,),
                 const SocialNetworks()
               ],
             ),

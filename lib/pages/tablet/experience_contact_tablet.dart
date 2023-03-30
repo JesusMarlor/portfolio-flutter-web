@@ -22,19 +22,49 @@ class ExperienceContactTablet extends StatelessWidget {
             const SizedBox( height: 20,),
             const Text("Experiencia", style: AppTheme.titleSectionTablet,),
             const SizedBox( height: 20,),
-            Expanded(
-              child: AlignedGridView.count(
-                crossAxisCount: 3,
-                itemCount: dashboardProvider.listExperience.length,
-                itemBuilder: (BuildContext context, int index){
-                  return  InkWell(
-                      onTap: ()=> Utils().openUrl(dashboardProvider.listExperience[index].url),
-                      child: CardExperience( experience: dashboardProvider.listExperience[index] )
-                  );
-                },
-                mainAxisSpacing: 8.0,
-                crossAxisSpacing: 8.0,
-              ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/images/dev1.png", width:  MediaQuery.of(context).size.height * .10,),
+                      SizedBox(height: MediaQuery.of(context).size.height * .05,),
+                      Image.asset("assets/images/dev3.png",width:  MediaQuery.of(context).size.height * .10),
+                      SizedBox(height: MediaQuery.of(context).size.height * .05,),
+                      Image.asset("assets/images/dev2.png",width:  MediaQuery.of(context).size.height * .10,),
+                    ],
+                  ),
+                ),
+                Expanded(
+                    flex: 7,
+                    child: Wrap(
+                      children: List.generate(dashboardProvider.listExperience.length, (index) => InkWell(
+                          onTap: ()=> Utils().openUrl(dashboardProvider.listExperience[index].url),
+                          child: Container(
+                              padding: const EdgeInsets.all(10),
+                              width: MediaQuery.of(context).size.height * .20,
+                              height: MediaQuery.of(context).size.height * .20,
+                              child: CardExperience( experience: dashboardProvider.listExperience[index] ))
+                      )),
+                    )/* AlignedGridView.count(
+                    crossAxisCount: isDesktop?4:2,
+                    itemCount: dashboardProvider.listExperience.length,
+                    itemBuilder: (BuildContext context, int index){
+                      return  InkWell(
+                          onTap: ()=> Utils().openUrl(dashboardProvider.listExperience[index].url),
+                          child: CardExperience( experience: dashboardProvider.listExperience[index] )
+                      );
+                    },
+                    mainAxisSpacing: 8.0,
+                    crossAxisSpacing: 8.0,
+                  ),*/
+                ),
+              ],
+            ),
+            const Expanded(
+              child: SizedBox(),
             ),
             Container(
                 padding: const EdgeInsets.all(10),

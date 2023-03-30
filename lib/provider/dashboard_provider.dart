@@ -44,7 +44,7 @@ class DashboardProvider extends ChangeNotifier{
     ),
     School(
         title: "Cursos en linea",
-        description: "Platzi",
+        description: "Platzi y Udemy",
         year: "2019",
         link: "https://platzi.com/p/JesusMarfil/"
     ),

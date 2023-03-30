@@ -21,31 +21,37 @@ class Projects extends StatelessWidget {
           const SizedBox( height: 20,),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Wrap(
-              children: List.generate(dashboardProvider.listProjects.length, (index) => InkWell(
-                  onTap: ()=> Utils().openUrl(dashboardProvider.listProjects[index].url),
-                  child: Container(
-                    padding: const EdgeInsets.all(10),
-                    width: MediaQuery.of(context).size.height * .25,
-                      height: MediaQuery.of(context).size.height * .32,
-                      child: CardProject( project: dashboardProvider.listProjects[index] ))
-              )),
-            ),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 3,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image.asset("assets/images/laptop.png", width:  MediaQuery.of(context).size.height * .18,),
+                      SizedBox(height: MediaQuery.of(context).size.height * .05,),
+                      Image.asset("assets/images/phone.png",width:  MediaQuery.of(context).size.height * .18),
+                      SizedBox(height: MediaQuery.of(context).size.height * .05,),
+                      Image.asset("assets/images/smart-watch.png",width:  MediaQuery.of(context).size.height * .18,),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  flex: 7,
+                  child: Wrap(
+                    children: List.generate(dashboardProvider.listProjects.length, (index) => InkWell(
+                        onTap: ()=> Utils().openUrl(dashboardProvider.listProjects[index].url),
+                        child: Container(
+                            padding: const EdgeInsets.all(10),
+                            width: MediaQuery.of(context).size.height * .25,
+                            height: MediaQuery.of(context).size.height * .32,
+                            child: CardProject( project: dashboardProvider.listProjects[index] ))
+                    )),
+                  ),
+                ),
+              ],
+            )
           ),
-          /*Expanded(
-            child: AlignedGridView.count(
-              crossAxisCount: 4,
-              itemCount: dashboardProvider.listProjects.length,
-              itemBuilder: (BuildContext context, int index){
-                return  InkWell(
-                  onTap: ()=> Utils().openUrl(dashboardProvider.listProjects[index].url),
-                    child: CardProject( project: dashboardProvider.listProjects[index] )
-                );
-              },
-              mainAxisSpacing: 8.0,
-              crossAxisSpacing: 8.0,
-            ),
-          )*/
         ],
       )
     );

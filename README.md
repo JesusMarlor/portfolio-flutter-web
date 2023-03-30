@@ -94,3 +94,9 @@ flutter --version
 -------------
 L.C.C Jesus Marfil
 -------------
+
+
+Iconos:
+<a href="https://www.flaticon.com/free-icons/developer" title="developer icons">Developer icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/app-development" title="app development icons">App development icons created by Vectorslab - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Design Circle - Flaticon</a>
